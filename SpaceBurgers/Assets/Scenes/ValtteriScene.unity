@@ -563,6 +563,8 @@ MonoBehaviour:
   burgeri: {fileID: 0}
   stack: 
   burgerID: 0
+  burgerTemplate: {fileID: 1187301917815668, guid: c06394c873e2c4f4c8507a2f6388455f,
+    type: 2}
 --- !u!212 &796284795
 SpriteRenderer:
   m_ObjectHideFlags: 0

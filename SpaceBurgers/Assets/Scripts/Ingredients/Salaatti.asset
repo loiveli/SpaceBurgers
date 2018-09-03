@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Salaatti
   AinesID: 1
-  Kuva: {fileID: 21300000, guid: aa56795408a08404686e75c956c9f65e, type: 3}
+  Kuva: {fileID: 21300002, guid: d3d06f200a7091a4f9f0fbc7c37411f6, type: 3}
