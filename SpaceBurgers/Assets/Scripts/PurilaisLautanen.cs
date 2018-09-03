@@ -20,9 +20,11 @@ public class PurilaisLautanen : MonoBehaviour
     }
     public void resetBurger()
     {
-
+        BurgerSize = 0;
         stack.Clear();
-
+        foreach(GameObject i in GameObject.FindGameObjectsWithTag("Aines")){
+            Destroy(i);
+        }
     }
     public void addLayer(int aines)
     {
@@ -52,9 +54,7 @@ public class PurilaisLautanen : MonoBehaviour
             Debug.Log("Wrong burger");
             resetBurger();
         }
-        foreach(GameObject i in GameObject.FindGameObjectsWithTag("Aines")){
-            Destroy(i);
-        }
+        
     }
     private void ShowBurger(int aines){
         GameObject x = Instantiate(burgerTemplate, gameObject.transform.position + new Vector3(0,BurgerSize,0),Quaternion.identity );
