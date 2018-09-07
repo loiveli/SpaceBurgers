@@ -14,8 +14,17 @@ public class PihvinPaistuminen : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		paistoaika += Time.deltaTime;
-		if(paistoaika > 6){
-		GetComponent<SpriteRenderer>().color = new Color (0.5f, 0.5f, 0.5f, 1f);
-	}
+		
+		//pihvin paisto hyväksi
+		if(paistoaika > 5 && paistoaika < 10){
+			GetComponent<SpriteRenderer>().color = new Color (0.5f, 0.5f, 0.5f, 1f);
+		}
+		//pihvin karrelle palaminen
+		if(paistoaika > 10){
+			GetComponent<SpriteRenderer>().color = new Color (0f, 0f, 0f, 1f);
+		}
+		if(paistoaika > 15){
+			Destroy(gameObject);
+		}
 	}
 }
