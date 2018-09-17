@@ -2,38 +2,85 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Drag : MonoBehaviour {
+public class Drag : MonoBehaviour
+{
 
     public float moveSpeed;
 
     [HideInInspector]
-    public float offset = 0.05f;
+    public Vector3 offset;
     private bool following;
-    void Start ()
+	public int AinesDragged;
+	public SpriteRenderer spriteRND;
+	public GameObject menuREF;
+	public MenuRefrence menuScript;
+	void Start()
     {
+        following = false;
+        offset = new Vector3(0f, 0f, 10f);
+		AinesDragged = -1;
+		spriteRND = gameObject.GetComponent<SpriteRenderer>();
+		menuScript = menuREF.GetComponent<MenuRefrence>();
+	}
+
+    void FixedUpdate()
+    {
+
+        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
+    }
+
+    void Update()
+    {
+		
+		if(following && AinesDragged != -1){
+			spriteRND.sprite = menuScript.IngredientID[AinesDragged].Kuva;
+		}
+    
+		if(AinesDragged == -1){
+			spriteRND.sprite = null;
+			spriteRND.enabled = false;
+
+		}else{
+			spriteRND.enabled = true;
+		}
+		
+		
+	}
+	
+	
+	void OnMouseDown()
+	{
+	Collider2D[] colliders;
+		colliders = Physics2D.OverlapBoxAll(gameObject.transform.position, new Vector2(0.64f,0.64f),0f);
+		foreach(Collider2D meme in colliders){
+			if(meme.tag == "Pino"){
+				StartDrag( meme.gameObject.GetComponent<AinesIDREF>().AinesOsaID);
+			}
+		}	
+	}
+	void OnMouseUp()
+	{
+		if(following){
+			StopDrag();
+		}
+	}
+	public void StartDrag(int ainesID){
+		following = true;
+		AinesDragged = ainesID;
+	}
+
+
+	void StopDrag(){
+		Collider2D[] colliders;
+		colliders = Physics2D.OverlapBoxAll(gameObject.transform.position, new Vector2(0.64f,0.64f),0f);
+		foreach(Collider2D meme in colliders){
+			if(meme.tag == "Lautanen"){
+				meme.gameObject.GetComponent<PurilaisLautanen>().addLayer(AinesDragged);
+			}
+		}	
+	
 		following = false;
-		offset += 10;
+		AinesDragged = -1;
 	}
 
-    void Update ()
-    {
-		if (Input.GetMouseButtonDown(0) && 
-           ((Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).magnitude <= offset))
-		{
-			if (following)
-			{
-				following = false;
-			}
-			else
-			{
-				following = true;
-			}
-		}
-
-        if (following)
-		{
-			transform.position = Vector2.Lerp(transform.position, 
-                                 Camera.main.ScreenToWorldPoint(Input.mousePosition), moveSpeed);
-		}
-	}
 }

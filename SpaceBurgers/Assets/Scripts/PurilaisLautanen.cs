@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PurilaisLautanen : MonoBehaviour
 {
+    public GameObject menuREF;
     public MenuRefrence menu;
     public Hampurilanen burgeri;
     public List<int> stack;
@@ -13,7 +14,7 @@ public class PurilaisLautanen : MonoBehaviour
     private float BurgerSize;
     public void Start()
     {
-        menu = gameObject.GetComponent<MenuRefrence>();    
+        menu = menuREF.GetComponent<MenuRefrence>();    
         burgerID = 0;
         burgeri = menu.BurgerMenu[burgerID];
         BurgerSize = 0;
@@ -59,7 +60,7 @@ public class PurilaisLautanen : MonoBehaviour
     private void ShowBurger(int aines){
         GameObject x = Instantiate(burgerTemplate, gameObject.transform.position + new Vector3(0,BurgerSize,0),Quaternion.identity );
         x.GetComponent<SpriteRenderer>().sprite = menu.IngredientID[aines].Kuva;
-        BurgerSize += 0.05f;
+        BurgerSize += 0.1f;
     }
     private void Update()
     {

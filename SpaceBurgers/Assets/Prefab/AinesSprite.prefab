@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4300524261206800}
   - component: {fileID: 212601442049383504}
-  - component: {fileID: 114270634168972338}
   m_Layer: 0
   m_Name: AinesSprite
   m_TagString: Aines
@@ -41,19 +40,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114270634168972338
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1187301917815668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407c3ada53a3743bdaac9db4c66585c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  offset: 0.05
 --- !u!212 &212601442049383504
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -67,6 +53,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:

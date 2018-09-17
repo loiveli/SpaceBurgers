@@ -12,7 +12,7 @@ public class PihvinPaistuminen : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		paistoaika += Time.deltaTime;
 		
 		//pihvin paisto hyväksi
