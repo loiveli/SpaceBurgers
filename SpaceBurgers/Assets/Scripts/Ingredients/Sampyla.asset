@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: "S\xE4mpyl\xE4"
   AinesID: 0
-  Kuva: {fileID: 21300014, guid: d3d06f200a7091a4f9f0fbc7c37411f6, type: 3}
+  Kuva: {fileID: 21300000, guid: 39ac9c12bdf5ef84bbf367b2a54b205d, type: 3}

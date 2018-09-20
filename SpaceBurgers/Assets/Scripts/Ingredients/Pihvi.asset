@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43349fd4cb032d24ebc1e80fa3d4858c, type: 3}
   m_Name: Pihvi
   m_EditorClassIdentifier: 
-  name: 
-  AinesID: 0
-  Kuva: {fileID: 21300012, guid: d3d06f200a7091a4f9f0fbc7c37411f6, type: 3}
+  name: Pihvi
+  AinesID: 2
+  Kuva: {fileID: 21300000, guid: 27ca47ba124c1734aba0a091d5475fcf, type: 3}

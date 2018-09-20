@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Juusto
   AinesID: 3
-  Kuva: {fileID: 21300010, guid: d3d06f200a7091a4f9f0fbc7c37411f6, type: 3}
+  Kuva: {fileID: 21300000, guid: 0dfabbb4cd2f2684d9a929fc019054ae, type: 3}

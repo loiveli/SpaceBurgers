@@ -32,10 +32,13 @@ public class Drag : MonoBehaviour
     void Update()
     {
 		
-		if(following && AinesDragged != -1){
+		if(following && AinesDragged >= 0){
 			spriteRND.sprite = menuScript.IngredientID[AinesDragged].Kuva;
 		}
     
+		if(AinesDragged == -2){
+			spriteRND.sprite = menuScript.RaakaPihvi.Kuva;
+		}
 		if(AinesDragged == -1){
 			spriteRND.sprite = null;
 			spriteRND.enabled = false;
@@ -55,6 +58,12 @@ public class Drag : MonoBehaviour
 		foreach(Collider2D meme in colliders){
 			if(meme.tag == "Pino"){
 				StartDrag( meme.gameObject.GetComponent<AinesIDREF>().AinesOsaID);
+			}
+			if(meme.tag == "Grilli"){
+				if(meme.GetComponent<PihvinPaistuminen>().PihviValmis){
+					meme.GetComponent<PihvinPaistuminen>().TakePihvi();
+					StartDrag(2);
+				}
 			}
 		}	
 	}
@@ -76,6 +85,9 @@ public class Drag : MonoBehaviour
 		foreach(Collider2D meme in colliders){
 			if(meme.tag == "Lautanen"){
 				meme.gameObject.GetComponent<PurilaisLautanen>().addLayer(AinesDragged);
+			}
+			if ( meme.tag == "Grilli"&&AinesDragged == -2){
+				meme.gameObject.GetComponent<PihvinPaistuminen>().StartGrilling();
 			}
 		}	
 	

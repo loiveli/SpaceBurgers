@@ -58,9 +58,13 @@ public class PurilaisLautanen : MonoBehaviour
         
     }
     private void ShowBurger(int aines){
-        GameObject x = Instantiate(burgerTemplate, gameObject.transform.position + new Vector3(0,BurgerSize,0),Quaternion.identity );
+        if(aines >= 0){
+            GameObject x = Instantiate(burgerTemplate, gameObject.transform.position + new Vector3(0,BurgerSize*0.1f,0),Quaternion.identity );
         x.GetComponent<SpriteRenderer>().sprite = menu.IngredientID[aines].Kuva;
-        BurgerSize += 0.1f;
+        BurgerSize += 1;
+        x.GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(BurgerSize)+1;
+        }
+        
     }
     private void Update()
     {
