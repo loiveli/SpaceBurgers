@@ -14,4 +14,4 @@ MonoBehaviour:
   name: PerusBurger
   Image: {fileID: 0}
   layers: 4
-  Ingredients: 00000000010000000200000000000000
+  Ingredients: 000000000100000002000000

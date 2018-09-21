@@ -8,10 +8,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dbe7c577798a9246a8f8e9b723a0b30, type: 3}
-  m_Name: Bland burger
+  m_Script: {fileID: 11500000, guid: 43349fd4cb032d24ebc1e80fa3d4858c, type: 3}
+  m_Name: KansiSampyla
   m_EditorClassIdentifier: 
-  name: Bland burger
-  Image: {fileID: 0}
-  layers: 3
-  Ingredients: 0000000002000000
+  name: KansiSampyla
+  AinesID: -3
+  Kuva: {fileID: 21300000, guid: dc3ba4989c327b341baa7284c7b2107d, type: 3}
