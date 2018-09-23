@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dbe7c577798a9246a8f8e9b723a0b30, type: 3}
-  m_Name: JuustoBurger
+  m_Name: Cheeseburger
   m_EditorClassIdentifier: 
   name: JuustoBurger
   Image: {fileID: 0}
   layers: 5
-  Ingredients: 00000000010000000200000003000000
+  Ingredients: 0000000004000000020000000100000003000000

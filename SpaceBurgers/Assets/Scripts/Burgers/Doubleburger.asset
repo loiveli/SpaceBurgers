@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dbe7c577798a9246a8f8e9b723a0b30, type: 3}
-  m_Name: Bland burger
+  m_Name: Doubleburger
   m_EditorClassIdentifier: 
-  name: Bland burger
+  name: Doubleburger
   Image: {fileID: 0}
-  layers: 3
-  Ingredients: 0000000002000000
+  layers: 4
+  Ingredients: 0000000001000000030000000200000000000000010000000300000002000000

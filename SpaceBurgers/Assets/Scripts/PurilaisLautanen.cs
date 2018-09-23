@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PurilaisLautanen : MonoBehaviour
 {
@@ -13,13 +14,15 @@ public class PurilaisLautanen : MonoBehaviour
     public GameObject burgerTemplate;
     private float BurgerSize;
     public int BurgerTimer;
+    Text BurgerOrder;
     public void Start()
     {
         menu = menuREF.GetComponent<MenuRefrence>();    
-        burgerID = 0;
+        BurgerOrder = transform.GetChild(0).GetChild(0).GetComponent<Text>();
         burgeri = menu.BurgerMenu[burgerID];
         BurgerSize = 0;
         BurgerTimer = -1;
+        BurgerOrder.text = burgeri.name;
     }
     public void resetBurger()
     {
@@ -48,11 +51,7 @@ public class PurilaisLautanen : MonoBehaviour
         if(stack.SequenceEqual(burgeri.Ingredients)){
             Debug.Log("Correct burger");
             
-            if(burgerID <1){
-                burgerID++;
-            }else{
-                burgerID = 0;
-            }
+           
             
             burgeri = menu.BurgerMenu[burgerID];
             BurgerTimer = 100;
