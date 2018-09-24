@@ -20,6 +20,11 @@ public class MenuConstrol : MonoBehaviour
 
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     public void ClosePanel()
     {
         panel.SetActive(false);

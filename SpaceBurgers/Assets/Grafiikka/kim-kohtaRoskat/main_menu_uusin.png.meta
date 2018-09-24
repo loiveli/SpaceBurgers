@@ -1,18 +1,13 @@
 fileFormatVersion: 2
-guid: db88d4082c56c9b46b6c19c1cf41d59d
-timeCreated: 1536336052
-licenseType: Free
+guid: d68f36f936938624294ba9639eb36b58
 TextureImporter:
   fileIDToRecycleName:
-    21300000: yla
-    21300002: ala
-    21300004: tomsku
-    21300006: sipuli
-    21300008: sal
-    21300010: patty
-    21300012: chee
+    21300000: main_menu_uusin_0
+    21300002: main_menu_uusin_1
+    21300004: main_menu_uusin_2
+    21300006: main_menu_uusin_3
   externalObjects: {}
-  serializedVersion: 4
+  serializedVersion: 7
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -30,6 +25,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -40,30 +37,33 @@ TextureImporter:
     serializedVersion: 2
     filterMode: -1
     aniso: -1
-    mipBias: -1
+    mipBias: -100
     wrapU: 1
     wrapV: 1
     wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -73,7 +73,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Standalone
+  - serializedVersion: 2
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -83,7 +84,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Android
+  - serializedVersion: 2
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -97,106 +99,96 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: yla
+      name: main_menu_uusin_0
       rect:
         serializedVersion: 2
-        x: 71
-        y: 705
-        width: 880
-        height: 354
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: ala
-      rect:
-        serializedVersion: 2
-        x: 1011
-        y: 771
-        width: 902
-        height: 297
+        x: 0
+        y: 0
+        width: 970
+        height: 547
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 1c3231a3204bb05449cece7d5f07f094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
-      name: tomsku
+      name: main_menu_uusin_1
       rect:
         serializedVersion: 2
-        x: 1301
-        y: 17
-        width: 618
-        height: 452
+        x: 387
+        y: 192
+        width: 211
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 3c033a274cae8314aa80e8f37441c859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
-      name: sipuli
+      name: main_menu_uusin_2
       rect:
         serializedVersion: 2
-        x: 56
-        y: 8
-        width: 655
-        height: 435
+        x: 387
+        y: 134
+        width: 167
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 67aca752389f9db4388fe9307cbbffba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
-      name: sal
+      name: main_menu_uusin_3
       rect:
         serializedVersion: 2
-        x: 18
-        y: 309
-        width: 452
-        height: 403
+        x: 385
+        y: 72
+        width: 101
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: patty
-      rect:
-        serializedVersion: 2
-        x: 798
-        y: 963
-        width: 320
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: chee
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 51
-        width: 469
-        height: 531
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
+      bones: []
+      spriteID: a8e7f5b7978d4804e876bdbb80d2b3ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
+    bones: []
+    spriteID: 836eeece932078c4799956742dc1642c
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
