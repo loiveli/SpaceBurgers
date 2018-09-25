@@ -55,7 +55,7 @@ public class Drag : MonoBehaviour
 	void OnMouseDown()
 	{
 	Collider2D[] colliders;
-		colliders = Physics2D.OverlapBoxAll(gameObject.transform.position, new Vector2(0.25f,0.25f),0f);
+		colliders = Physics2D.OverlapBoxAll(gameObject.transform.position, new Vector2(0.1f,0.1f),0f);
 		foreach(Collider2D meme in colliders){
 			if(meme.tag == "Pino"){
 				StartDrag( meme.gameObject.GetComponent<AinesIDREF>().AinesOsaID);
@@ -92,6 +92,7 @@ public class Drag : MonoBehaviour
 			}
 			if ( meme.tag == "Grilli"&&AinesDragged == -2){
 				meme.gameObject.GetComponent<PihvinPaistuminen>().StartGrilling();
+				break;
 			}
 		}	
 	

@@ -14,15 +14,17 @@ public class PurilaisLautanen : MonoBehaviour
     public GameObject burgerTemplate;
     private float BurgerSize;
     public int BurgerTimer;
+    public bool orderPassed;
     Text BurgerOrder;
     public void Start()
     {
         menu = menuREF.GetComponent<MenuRefrence>();    
-        BurgerOrder = transform.GetChild(0).GetChild(0).GetComponent<Text>();
+        //BurgerOrder = transform.GetChild(0).GetChild(0).GetComponent<Text>();
         burgeri = menu.BurgerMenu[burgerID];
         BurgerSize = 0;
         BurgerTimer = -1;
-        BurgerOrder.text = burgeri.name;
+        //BurgerOrder.text = burgeri.name;
+        orderPassed = false;
     }
     public void resetBurger()
     {
@@ -30,6 +32,9 @@ public class PurilaisLautanen : MonoBehaviour
         stack.Clear();
         foreach(GameObject i in GameObject.FindGameObjectsWithTag("Aines")){
             Destroy(i);
+        }
+        if(orderPassed){
+            Destroy(gameObject);
         }
     }
     public void addLayer(int aines)
@@ -52,7 +57,7 @@ public class PurilaisLautanen : MonoBehaviour
             Debug.Log("Correct burger");
             
            
-            
+            orderPassed = true;
             burgeri = menu.BurgerMenu[burgerID];
             BurgerTimer = 100;
         }
