@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Doubleburger
   Image: {fileID: 0}
-  layers: 4
+  layers: 0
   Ingredients: 0000000001000000030000000200000000000000010000000300000002000000

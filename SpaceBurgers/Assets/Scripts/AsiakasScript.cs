@@ -23,9 +23,9 @@ public class AsiakasScript : MonoBehaviour
         asiakasMax = 1;
         levelMax = 2;
         burgerLevel = 0;
-		burgerTimer = -1;
-        ProgressionLevel =0;
-        ProgressionMax = 1;
+        burgerTimer = -1;
+        ProgressionLevel = 0;
+        ProgressionMax = 0;
         NewBurgerAmount = 3;
         levelRequirement = 5;
     }
@@ -33,11 +33,12 @@ public class AsiakasScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(BurgerCount%levelRequirement == 0&&ProgressionLevel<ProgressionMax){
+        if (BurgerCount % levelRequirement == 0 && ProgressionLevel < ProgressionMax)
+        {
             levelMax += NewBurgerAmount;
             ProgressionLevel++;
         }
-        if (GameObject.FindGameObjectsWithTag("Lautanen").Length < asiakasMax&&burgerTimer == -1)
+        if (GameObject.FindGameObjectsWithTag("Lautanen").Length < asiakasMax && burgerTimer == -1)
         {
             burgerTimer = Random.Range(180, 300);
 
@@ -46,10 +47,11 @@ public class AsiakasScript : MonoBehaviour
         {
             burgerTimer--;
         }
-		if(burgerTimer == 0){
-			OrderBurger();
-		}
-        
+        if (burgerTimer == 0)
+        {
+            OrderBurger();
+        }
+
     }
 
     void OrderBurger()
@@ -65,7 +67,7 @@ public class AsiakasScript : MonoBehaviour
         {
             inst.GetComponent<PurilaisLautanen>().burgerID = Random.Range(0, levelMax);
         }
-        
+
     }
 
 

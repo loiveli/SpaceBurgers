@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: JuustoBurger
   Image: {fileID: 0}
-  layers: 5
+  layers: 0
   Ingredients: 0000000004000000020000000100000003000000
