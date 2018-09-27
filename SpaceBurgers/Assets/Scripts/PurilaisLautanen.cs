@@ -25,6 +25,7 @@ public class PurilaisLautanen : MonoBehaviour
         BurgerTimer = -1;
         //BurgerOrder.text = burgeri.name;
         orderPassed = false;
+
     }
     public void resetBurger()
     {

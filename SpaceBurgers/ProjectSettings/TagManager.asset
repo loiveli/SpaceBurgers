@@ -8,6 +8,7 @@ TagManager:
   - Lautanen
   - Pino
   - Grilli
+  - PauseButton
   layers:
   - Default
   - TransparentFX
