@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PurilaisLautanen : MonoBehaviour
 {
+    public GameObject orderText;
     public GameObject menuREF;
     public MenuRefrence menu;
     public Hampurilanen burgeri;
@@ -18,6 +19,7 @@ public class PurilaisLautanen : MonoBehaviour
     Text BurgerOrder;
     public void Start()
     {
+        orderText = GameObject.FindGameObjectWithTag("Teksti");
         menu = menuREF.GetComponent<MenuRefrence>();    
         //BurgerOrder = transform.GetChild(0).GetChild(0).GetComponent<Text>();
         burgeri = menu.BurgerMenu[burgerID];
@@ -25,16 +27,17 @@ public class PurilaisLautanen : MonoBehaviour
         BurgerTimer = -1;
         //BurgerOrder.text = burgeri.name;
         orderPassed = false;
-
+        orderText.GetComponent<TextScript>().ShowOrder(burgeri.name,new Vector2(transform.position.x, transform.position.y -0.5f));
     }
     public void resetBurger()
     {
         BurgerSize = 0;
         stack.Clear();
-        foreach(GameObject i in GameObject.FindGameObjectsWithTag("Aines")){
-            Destroy(i);
+        foreach(Transform i in transform){
+            Destroy(i.gameObject);
         }
         if(orderPassed){
+            orderText.GetComponent<TextScript>().EndOrder();
             Destroy(gameObject);
         }
     }
@@ -74,6 +77,7 @@ public class PurilaisLautanen : MonoBehaviour
         x.GetComponent<SpriteRenderer>().sprite = menu.IngredientID[aines].Kuva;
         BurgerSize += 1;
         x.GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(BurgerSize)+1;
+        x.transform.parent = gameObject.transform;
         }
         
     }
