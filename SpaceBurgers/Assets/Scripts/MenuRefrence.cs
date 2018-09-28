@@ -8,4 +8,7 @@ public class MenuRefrence : MonoBehaviour {
 	public List<Hampurilanen> BurgerMenu;
 	public List<AinesOsa> IngredientID;
 	public AinesOsa RaakaPihvi;
+
+
+   
 }

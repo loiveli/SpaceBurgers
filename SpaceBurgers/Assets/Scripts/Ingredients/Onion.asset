@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Onion
   m_EditorClassIdentifier: 
   name: Onion
-  AinesID: 8
-  Kuva: {fileID: 21300000, guid: 01891fc7cbfc2544e836cc855432dcdf, type: 3}
+  AinesID: 7
+  Kuva: {fileID: 21300000, guid: 3bc9152cc6714ae4ab84274541b4dd7d, type: 3}

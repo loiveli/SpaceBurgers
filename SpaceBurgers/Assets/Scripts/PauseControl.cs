@@ -2,22 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseControl : MonoBehaviour {
 
     [SerializeField]
-    Button pauseButton;
+    GameObject pausePanel;
 
 
-    private void Start()
+    public void Test(Button btn)
     {
-        pauseButton = GameObject.FindGameObjectWithTag("PauseButton").GetComponent<Button>();
-      
-        pauseButton.onClick.AddListener(()=>Test());
+        Time.timeScale = 0;
+        pausePanel.SetActive(true);
     }
 
-    public void Test()
+    public void GoToMenuScene()
     {
-        Debug.Log("Button pressed");
+        SceneManager.LoadScene(0);
+    }
+
+    public void ContinueGame()
+    {
+        Time.timeScale = 1;
+        pausePanel.SetActive(false);
+        
     }
 }

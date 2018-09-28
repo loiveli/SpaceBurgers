@@ -28,6 +28,7 @@ public class PurilaisLautanen : MonoBehaviour
         //BurgerOrder.text = burgeri.name;
         orderPassed = false;
         orderText.GetComponent<TextScript>().ShowOrder(burgeri.name);
+
     }
     public void resetBurger()
     {

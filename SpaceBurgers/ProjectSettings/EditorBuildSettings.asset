@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/mainScene.unity
     guid: 754929fb81d51894aa9a367bb80edca2
-  - enabled: 1
-    path: Assets/Scenes/kim2.unity
+  - enabled: 0
+    path: Assets/Roskat/kim2.unity
     guid: 4060f05a151ab534595986aeca38bb6f
+  - enabled: 1
+    path: Assets/Scenes/mainSceneKim.unity
+    guid: a7762774f54722849ab6d90182d69387
   m_configObjects: {}

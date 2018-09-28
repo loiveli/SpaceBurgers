@@ -70,7 +70,8 @@ public class Drag : MonoBehaviour
 	}
 	void OnMouseUp()
 	{
-		if(following){
+		if(following)
+        {
 			StopDrag();
 		}
 	}

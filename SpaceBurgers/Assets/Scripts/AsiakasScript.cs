@@ -7,6 +7,8 @@ public class AsiakasScript : MonoBehaviour
 
     // Use this for initialization
 
+  //  public GameObject asiakas1;
+
     public GameObject orderText;
     public int asiakasMax;
     public GameObject Lautanen;
@@ -18,6 +20,7 @@ public class AsiakasScript : MonoBehaviour
     public int ProgressionLevel;
     public int ProgressionMax;
     public int levelRequirement;
+
     void Start()
     {
         asiakasMax = 1;
@@ -45,6 +48,8 @@ public class AsiakasScript : MonoBehaviour
         }
         if (burgerTimer >= 0)
         {
+//            asiakas1.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Bacteria_1");
+
             burgerTimer--;
         }
         if (burgerTimer == 0)

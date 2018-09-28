@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Kurkku
   m_EditorClassIdentifier: 
   name: Kurkku
-  AinesID: 7
-  Kuva: {fileID: 21300000, guid: 240d3073223093f4f8cb2befc71f0751, type: 3}
+  AinesID: 8
+  Kuva: {fileID: 21300000, guid: faf77fbdcd7802d45991e0109b65f44a, type: 3}
