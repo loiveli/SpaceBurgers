@@ -90,7 +90,7 @@ public class Drag : MonoBehaviour
 				}
 				
 			}
-			if ( meme.tag == "Grilli"&&AinesDragged == -2){
+			if ( meme.tag == "Grilli"&&AinesDragged == -2&&meme.GetComponent<PihvinPaistuminen>().Paisto == false){
 				meme.gameObject.GetComponent<PihvinPaistuminen>().StartGrilling();
 				break;
 			}
