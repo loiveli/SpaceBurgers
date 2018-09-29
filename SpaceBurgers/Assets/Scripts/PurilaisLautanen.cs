@@ -17,6 +17,11 @@ public class PurilaisLautanen : MonoBehaviour
     public int BurgerTimer;
     public bool orderPassed;
     Text BurgerOrder;
+
+    //kim
+    public GameObject orderImageHolder;
+    //kim
+
     public void Start()
     {
         orderText = GameObject.FindGameObjectWithTag("Teksti");
@@ -29,7 +34,45 @@ public class PurilaisLautanen : MonoBehaviour
         orderPassed = false;
         orderText.GetComponent<TextScript>().ShowOrder(burgeri.name);
 
+        //kim
+        orderImageHolder = GameObject.FindGameObjectWithTag("Temp");
+        ShowOrderImage();
+        //kim
     }
+
+    //kim copy from burgerShowCase scripts
+    public void ShowOrderImage()
+    {
+        int burgerLayers = 0;
+        float layerHeight = 0.15f;
+        float skaala = 1;
+        
+        if (burgeri.Ingredients.Count > 6)
+        {
+            layerHeight = 0.15f * (8f / (burgeri.Ingredients.Count + 1));
+            skaala = 8f / (burgeri.Ingredients.Count + 1);
+        }
+
+        foreach (int i in burgeri.Ingredients)
+        {
+            GameObject x = Instantiate(burgerTemplate, orderImageHolder.transform.position + new Vector3(0, burgerLayers * layerHeight, 0), Quaternion.identity);
+            x.GetComponent<SpriteRenderer>().sprite = menu.IngredientID[i].Kuva;
+            burgerLayers++;
+            x.GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(burgerLayers) + 1;
+            x.transform.parent = orderImageHolder.transform;
+            x.transform.localScale = new Vector3(1, skaala, 1);
+        }
+
+        GameObject kansiSampyla = Instantiate(burgerTemplate, orderImageHolder.transform.position + new Vector3(0, burgerLayers * layerHeight, 0), Quaternion.identity);
+        kansiSampyla.GetComponent<SpriteRenderer>().sprite = menu.IngredientID[5].Kuva;
+        burgerLayers++;
+        kansiSampyla.GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(burgerLayers) + 1;
+        kansiSampyla.transform.parent = orderImageHolder.transform;
+        kansiSampyla.transform.localScale = new Vector3(1, skaala, 1);
+    }
+    //kim
+
+
     public void resetBurger()
     {
         BurgerSize = 0;

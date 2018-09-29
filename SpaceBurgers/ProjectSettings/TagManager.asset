@@ -9,6 +9,8 @@ TagManager:
   - Pino
   - Grilli
   - PauseButton
+  - Teksti
+  - Temp
   layers:
   - Default
   - TransparentFX
