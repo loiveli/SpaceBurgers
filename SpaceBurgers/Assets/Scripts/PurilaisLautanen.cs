@@ -20,6 +20,7 @@ public class PurilaisLautanen : MonoBehaviour
 
     //kim
     public GameObject orderImageHolder;
+    public GameObject orderImageChild;
     //kim
 
     public void Start()
@@ -36,6 +37,7 @@ public class PurilaisLautanen : MonoBehaviour
 
         //kim
         orderImageHolder = GameObject.FindGameObjectWithTag("Temp");
+        orderImageChild = GameObject.FindGameObjectWithTag("TempChild");
         ShowOrderImage();
         //kim
     }
@@ -43,6 +45,8 @@ public class PurilaisLautanen : MonoBehaviour
     //kim copy from burgerShowCase scripts
     public void ShowOrderImage()
     {
+        orderImageHolder.GetComponentInChildren<SpriteRenderer>().sprite = Resources.Load<Sprite>("speechBubble");
+
         int burgerLayers = 0;
         float layerHeight = 0.15f;
         float skaala = 1;
@@ -55,19 +59,19 @@ public class PurilaisLautanen : MonoBehaviour
 
         foreach (int i in burgeri.Ingredients)
         {
-            GameObject x = Instantiate(burgerTemplate, orderImageHolder.transform.position + new Vector3(0, burgerLayers * layerHeight, 0), Quaternion.identity);
+            GameObject x = Instantiate(burgerTemplate, orderImageChild.transform.position + new Vector3(0, burgerLayers * layerHeight, 0), Quaternion.identity);
             x.GetComponent<SpriteRenderer>().sprite = menu.IngredientID[i].Kuva;
             burgerLayers++;
             x.GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(burgerLayers) + 1;
-            x.transform.parent = orderImageHolder.transform;
+            x.transform.parent = orderImageChild.transform;
             x.transform.localScale = new Vector3(1, skaala, 1);
         }
 
-        GameObject kansiSampyla = Instantiate(burgerTemplate, orderImageHolder.transform.position + new Vector3(0, burgerLayers * layerHeight, 0), Quaternion.identity);
+        GameObject kansiSampyla = Instantiate(burgerTemplate, orderImageChild.transform.position + new Vector3(0, burgerLayers * layerHeight, 0), Quaternion.identity);
         kansiSampyla.GetComponent<SpriteRenderer>().sprite = menu.IngredientID[5].Kuva;
         burgerLayers++;
         kansiSampyla.GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(burgerLayers) + 1;
-        kansiSampyla.transform.parent = orderImageHolder.transform;
+        kansiSampyla.transform.parent = orderImageChild.transform;
         kansiSampyla.transform.localScale = new Vector3(1, skaala, 1);
     }
     //kim
@@ -81,9 +85,19 @@ public class PurilaisLautanen : MonoBehaviour
         {
             Destroy(i.gameObject);
         }
+
         if (orderPassed)
         {
             orderText.GetComponent<TextScript>().EndOrder();
+
+            //kim
+            orderImageHolder.GetComponentInChildren<SpriteRenderer>().sprite = Resources.Load<Sprite>("transparent");
+            foreach (Transform obj in orderImageChild.transform)
+            {
+                Destroy(obj.gameObject);
+            }
+            //kim
+
             Destroy(gameObject);
         }
     }
