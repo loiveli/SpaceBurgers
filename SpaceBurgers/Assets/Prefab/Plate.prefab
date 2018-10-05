@@ -78,7 +78,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8280e7127033d499fc980e2542fc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuREF: {fileID: 1632383835297678, guid: e4f86b4833cc08e43999364ccadaa870, type: 2}
+  orderText: {fileID: 0}
+  menuREF: {fileID: 1623614331564954, guid: d1f450a6d247cfe499d59931830e8630, type: 2}
   menu: {fileID: 0}
   burgeri: {fileID: 0}
   stack: 
@@ -86,6 +87,10 @@ MonoBehaviour:
   burgerTemplate: {fileID: 1187301917815668, guid: c06394c873e2c4f4c8507a2f6388455f,
     type: 2}
   BurgerTimer: 0
+  orderPassed: 0
+  customerImageHolder: {fileID: 0}
+  customerOriginPosition: {fileID: 0}
+  customerTargetPosition: {fileID: 0}
 --- !u!212 &212506654394815812
 SpriteRenderer:
   m_ObjectHideFlags: 1
