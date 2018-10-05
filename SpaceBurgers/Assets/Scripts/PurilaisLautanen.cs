@@ -54,8 +54,7 @@ public class PurilaisLautanen : MonoBehaviour
     {
         orderImageHolder.GetComponentInChildren<SpriteRenderer>().sprite = Resources.Load<Sprite>("speechBubble");
         customerImageHolder.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Customer1");
-        customerImageHolder.transform.position = customerOriginPosition.transform.position;
-
+       
         int burgerLayers = 0;
         float layerHeight = 0.15f;
         float skaala = 1;

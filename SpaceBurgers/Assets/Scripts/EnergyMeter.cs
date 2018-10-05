@@ -9,8 +9,17 @@ public class EnergyMeter : MonoBehaviour
     float maxEnergy = 10000f;
     public static float Energy;
 
+    //kim
+    PauseControl gameControl;
+    public GameObject gameControlGameObject;
+    //kim
+
      void Start()
     {
+        //kim
+        gameControl = gameControlGameObject.GetComponent<PauseControl>();
+        //kim
+
         EnergyBar0 = GetComponent<Image>();
         Energy = maxEnergy;
     }
@@ -22,5 +31,12 @@ public class EnergyMeter : MonoBehaviour
         }
         
         EnergyBar0.fillAmount = Energy / maxEnergy;
+
+        if(Energy == 0)
+        {
+            gameControl.GameOver();
+        }
     }
+
+   
 }
