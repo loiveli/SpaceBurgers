@@ -12,6 +12,9 @@ TagManager:
   - Teksti
   - Temp
   - TempChild
+  - Customer
+  - Target
+  - Origin
   layers:
   - Default
   - TransparentFX

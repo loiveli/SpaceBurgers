@@ -19,8 +19,12 @@ public class PurilaisLautanen : MonoBehaviour
     Text BurgerOrder;
 
     //kim
-    public GameObject orderImageHolder;
-    public GameObject orderImageChild;
+    GameObject orderImageHolder;
+    GameObject orderImageChild;
+    public GameObject customerImageHolder;
+    public GameObject customerOriginPosition;
+    public GameObject customerTargetPosition;
+
     //kim
 
     public void Start()
@@ -38,6 +42,9 @@ public class PurilaisLautanen : MonoBehaviour
         //kim
         orderImageHolder = GameObject.FindGameObjectWithTag("Temp");
         orderImageChild = GameObject.FindGameObjectWithTag("TempChild");
+        customerImageHolder = GameObject.FindGameObjectWithTag("Customer");
+        customerOriginPosition = GameObject.FindGameObjectWithTag("Origin");
+        customerTargetPosition = GameObject.FindGameObjectWithTag("Target");
         ShowOrderImage();
         //kim
     }
@@ -46,6 +53,8 @@ public class PurilaisLautanen : MonoBehaviour
     public void ShowOrderImage()
     {
         orderImageHolder.GetComponentInChildren<SpriteRenderer>().sprite = Resources.Load<Sprite>("speechBubble");
+        customerImageHolder.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Customer1");
+        customerImageHolder.transform.position = customerOriginPosition.transform.position;
 
         int burgerLayers = 0;
         float layerHeight = 0.15f;
@@ -89,9 +98,10 @@ public class PurilaisLautanen : MonoBehaviour
         if (orderPassed)
         {
             orderText.GetComponent<TextScript>().EndOrder();
-
+            
             //kim
             orderImageHolder.GetComponentInChildren<SpriteRenderer>().sprite = Resources.Load<Sprite>("transparent");
+            customerImageHolder.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("transparent");
             foreach (Transform obj in orderImageChild.transform)
             {
                 Destroy(obj.gameObject);
