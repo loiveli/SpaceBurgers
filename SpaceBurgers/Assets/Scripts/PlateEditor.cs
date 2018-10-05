@@ -18,6 +18,8 @@ public class PlateEditor : MonoBehaviour
 	void Start()
     {
         menu = menuREF.GetComponent<MenuRefrence>();
+        input.text = "name";
+       
     }
 
     // Update is called once per frame
@@ -34,21 +36,20 @@ public class PlateEditor : MonoBehaviour
             Destroy(i.gameObject);
         }
 
-
-        //kim
-
-
-
     }
 	
     public void sendBurger()
     {
+        
+        Hampurilanen burgeri = ScriptableObject.CreateInstance<Hampurilanen>();
+        burgeri.Ingredients = stack;
+        burgerName = input.text;
+        burgeri.name = burgerName;
+        AssetDatabase.CreateAsset(burgeri, "assets/Scripts/Burgers/" + burgerName + ".asset");
 
-		Hampurilanen burgeri = ScriptableObject.CreateInstance<Hampurilanen>();
-		burgeri.Ingredients = stack;
-		burgerName = input.text;
-		burgeri.name = burgerName;
-		AssetDatabase.CreateAsset(burgeri,"assets/Scripts/Burgers/"+burgerName+".asset");
+        resetBurger();
+        
+		
     }
     
 	public void addLayer(int aines)
