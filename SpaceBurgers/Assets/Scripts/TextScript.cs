@@ -8,7 +8,7 @@ public class TextScript : MonoBehaviour
    
     // Use this for initialization
     public Text teksti;
-
+    public GameObject anchor;
 
     void Start()
     {
@@ -17,7 +17,15 @@ public class TextScript : MonoBehaviour
         teksti.enabled = false;
 
     }
-
+    
+    
+    void Update()
+    {
+        if(anchor != null){
+            transform.position = Camera.main.WorldToScreenPoint(anchor.transform.position);
+        }
+        
+    }
     public void ShowOrder(string burgerName)
     {
         teksti.enabled = true;

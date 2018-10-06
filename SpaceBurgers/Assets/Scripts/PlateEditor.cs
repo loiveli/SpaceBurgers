@@ -45,8 +45,9 @@ public class PlateEditor : MonoBehaviour
         burgeri.Ingredients = stack;
         burgerName = input.text;
         burgeri.name = burgerName;
+        #if UNITY_EDITOR
         AssetDatabase.CreateAsset(burgeri, "assets/Scripts/Burgers/" + burgerName + ".asset");
-
+        #endif
         resetBurger();
         
 		

@@ -52,9 +52,9 @@ public class PurilaisLautanen : MonoBehaviour
     //kim copy from burgerShowCase scripts
     public void ShowOrderImage()
     {
-        orderImageHolder.GetComponentInChildren<SpriteRenderer>().sprite = Resources.Load<Sprite>("speechBubble");
-        customerImageHolder.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Customer1");
-       
+        orderImageHolder.GetComponentInChildren<SpriteRenderer>().enabled = true;
+        customerImageHolder.GetComponent<SpriteRenderer>().enabled = true;
+       /* 
         int burgerLayers = 0;
         float layerHeight = 0.15f;
         float skaala = 1;
@@ -81,6 +81,7 @@ public class PurilaisLautanen : MonoBehaviour
         kansiSampyla.GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(burgerLayers) + 1;
         kansiSampyla.transform.parent = orderImageChild.transform;
         kansiSampyla.transform.localScale = new Vector3(1, skaala, 1);
+        */
     }
     //kim
 
@@ -99,14 +100,15 @@ public class PurilaisLautanen : MonoBehaviour
             orderText.GetComponent<TextScript>().EndOrder();
             
             //kim
-            orderImageHolder.GetComponentInChildren<SpriteRenderer>().sprite = Resources.Load<Sprite>("transparent");
-            customerImageHolder.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("transparent");
+            orderImageHolder.GetComponentInChildren<SpriteRenderer>().enabled = false;
+            customerImageHolder.GetComponent<SpriteRenderer>().enabled =false ;
+            /*
             foreach (Transform obj in orderImageChild.transform)
             {
                 Destroy(obj.gameObject);
             }
             //kim
-
+ */
             Destroy(gameObject);
         }
     }
