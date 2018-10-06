@@ -19,9 +19,10 @@ public class AsiakasScript : MonoBehaviour
     public int ProgressionLevel;
     public int ProgressionMax;
     public int levelRequirement;
-
+    public int UnlockedIngredients;
     void Start()
     {
+        UnlockedIngredients = 5;
         asiakasMax = 1;
         levelMax = 2;
         burgerLevel = 0;

@@ -15,6 +15,7 @@ TagManager:
   - Customer
   - Target
   - Origin
+  - AsiakasCTRL
   layers:
   - Default
   - TransparentFX
