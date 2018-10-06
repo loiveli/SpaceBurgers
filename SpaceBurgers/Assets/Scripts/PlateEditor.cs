@@ -7,53 +7,60 @@ public class PlateEditor : MonoBehaviour
 {
 
     // Use this for initialization
-	public InputField input;
+    public InputField input;
     public GameObject menuREF;
     public MenuRefrence menu;
-    
+
     public List<int> stack;
     public int BurgerSize;
     public GameObject burgerTemplate;
     public string burgerName;
-	void Start()
+    void Start()
     {
         menu = menuREF.GetComponent<MenuRefrence>();
         input.text = "name";
-       
+
     }
 
     // Update is called once per frame
     void Update()
     {
-		
+
     }
     public void resetBurger()
     {
         BurgerSize = 0;
-        stack.Clear();
-        foreach (Transform i in transform)
-        {
-            Destroy(i.gameObject);
-        }
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
 
     }
-	
+
     public void sendBurger()
     {
-        
+
         Hampurilanen burgeri = ScriptableObject.CreateInstance<Hampurilanen>();
-        burgeri.Ingredients = stack;
+        Debug.Log("Initiated burger");
+        List<int> tempStack = stack;
+        burgeri.Ingredients = tempStack;
+        Debug.Log("added stack");
         burgerName = input.text;
+
         burgeri.name = burgerName;
-        #if UNITY_EDITOR
+        Debug.Log("named burger");
+#if UNITY_EDITOR
         AssetDatabase.CreateAsset(burgeri, "assets/Scripts/Burgers/" + burgerName + ".asset");
-        #endif
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+#endif
+        Debug.Log("Made burgerFile");
         resetBurger();
-        
-		
+
+
     }
-    
-	public void addLayer(int aines)
+
+    public void addLayer(int aines)
     {
         if (stack.Count == 0 && aines == 0)
         {
