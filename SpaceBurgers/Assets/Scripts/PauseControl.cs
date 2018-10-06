@@ -12,6 +12,8 @@ public class PauseControl : MonoBehaviour {
     [SerializeField]
     GameObject gameOverPanel;
 
+    public GameObject PauseButton;
+    public GameObject UnPauseButton;
    // GameObject plate;
 
     private void Start()
@@ -19,8 +21,18 @@ public class PauseControl : MonoBehaviour {
 //        plate = GameObject.FindGameObjectWithTag("Lautanen");
     }
 
+    /// <summary>
+    /// Update is called every frame, if the MonoBehaviour is enabled.
+    /// </summary>
+    void Update()
+    {
+        if(Input.GetKeyDown (KeyCode.Escape)){
+            
+            PauseButton.GetComponent<Button>().onClick.Invoke();
+        }
+    }
 
-    public void PauseGame(Button btn)
+    public void PauseGame()
     {
         Time.timeScale = 0;
         pausePanel.SetActive(true);
