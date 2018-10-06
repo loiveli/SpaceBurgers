@@ -12,7 +12,7 @@ public class AinesIDREF : MonoBehaviour {
 		activatedIngredient = false;
 		spr = gameObject.GetComponent<SpriteRenderer>();
 		spr.enabled = false;
-		gameObject.tag = null;
+		gameObject.tag = "Untagged";
 		asiakas = GameObject.FindGameObjectWithTag("AsiakasCTRL").GetComponent<AsiakasScript>();
 	}
 	
