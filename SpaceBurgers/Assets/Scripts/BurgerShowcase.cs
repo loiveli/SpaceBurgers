@@ -49,7 +49,26 @@ public class BurgerShowcase : MonoBehaviour
         showcaseBurger();
     }
 
+    public void OnNextBurgerClick(){   
+        timer = 600;
+        foreach (Transform z in transform)
+        {
+            Destroy(z.gameObject);
+        }
+        if (burgerID < asiakasScript.GetComponent<AsiakasScript>().levelMax)
+        {
+            burgerID++;
+        }
+        else
+        {
+            burgerID = 0;
+        }
 
+        burgeri = menu.BurgerMenu[burgerID];
+
+        burgerLayers = 0;
+        showcaseBurger();
+        }
 
 
     void FixedUpdate()
