@@ -2331,6 +2331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c548464d994f547a686869ccb5b084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  asiakas: {fileID: 0}
   orderText: {fileID: 0}
   asiakasMax: 0
   Lautanen: {fileID: 1583570230513024, guid: 002f002fb27608a45a3c9d5b95acee91, type: 2}
@@ -2699,10 +2700,10 @@ RectTransform:
   m_Father: {fileID: 1571921340}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -411.5, y: -295.5}
-  m_SizeDelta: {x: 250, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 125, y: 15}
+  m_SizeDelta: {x: 250, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1141662010
 MonoBehaviour:

@@ -6,7 +6,14 @@ public class UIAnchor : MonoBehaviour {
 
 	// Use this for initialization
 	public GameObject anchor;
-	void Update()
+	
+    void Awake()
+    {
+       if(anchor != null){
+            transform.position = Camera.main.WorldToScreenPoint(anchor.transform.position);
+        } 
+    }
+    void Update()
     {
         if(anchor != null){
             transform.position = Camera.main.WorldToScreenPoint(anchor.transform.position);

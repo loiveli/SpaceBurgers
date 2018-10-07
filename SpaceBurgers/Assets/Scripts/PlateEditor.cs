@@ -46,7 +46,6 @@ public class PlateEditor : MonoBehaviour
         burgeri.Ingredients = tempStack;
         Debug.Log("added stack");
         burgerName = input.text;
-
         burgeri.name = burgerName;
         Debug.Log("named burger");
 #if UNITY_EDITOR

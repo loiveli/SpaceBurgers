@@ -4,30 +4,35 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class PauseControl : MonoBehaviour {
+public class PauseControl : MonoBehaviour
+{
 
     [SerializeField]
     GameObject pausePanel;
 
     [SerializeField]
     GameObject gameOverPanel;
-
+    
     public GameObject PauseButton;
     public GameObject UnPauseButton;
-   // GameObject plate;
+    // GameObject plate;
 
-    private void Start()
+
+    void Awake()
+
     {
-//        plate = GameObject.FindGameObjectWithTag("Lautanen");
+        if(gameObject == UnPauseButton){
+            UnPauseButton.SetActive(false);
+        }
+        
     }
 
-    /// <summary>
-    /// Update is called every frame, if the MonoBehaviour is enabled.
-    /// </summary>
+
     void Update()
     {
-        if(Input.GetKeyDown (KeyCode.Escape)){
-            
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+
             PauseButton.GetComponent<Button>().onClick.Invoke();
         }
     }
@@ -48,7 +53,7 @@ public class PauseControl : MonoBehaviour {
     {
         Time.timeScale = 1;
         pausePanel.SetActive(false);
-        
+
     }
 
     public void GameOver()
