@@ -17,14 +17,14 @@ public class PurilaisLautanen : MonoBehaviour
     public int BurgerTimer;
     public bool orderPassed;
     Text BurgerOrder;
-
+    public GameObject asiakas;
     //kim
     GameObject orderImageHolder;
     GameObject orderImageChild;
     public GameObject customerImageHolder;
     public GameObject customerOriginPosition;
     public GameObject customerTargetPosition;
-
+    public int ordersFailed;
     //kim
 
     public void Start()
@@ -38,11 +38,11 @@ public class PurilaisLautanen : MonoBehaviour
         //BurgerOrder.text = burgeri.name;
         orderPassed = false;
         orderText.GetComponent<TextScript>().ShowOrder(burgeri.name);
-
+        ordersFailed = 0;
         //kim
         orderImageHolder = GameObject.FindGameObjectWithTag("Temp");
         orderImageChild = GameObject.FindGameObjectWithTag("TempChild");
-        customerImageHolder = GameObject.FindGameObjectWithTag("Customer");
+        asiakas = GameObject.FindGameObjectWithTag("Customer");
         customerOriginPosition = GameObject.FindGameObjectWithTag("Origin");
         customerTargetPosition = GameObject.FindGameObjectWithTag("Target");
         ShowOrderImage();
@@ -53,7 +53,7 @@ public class PurilaisLautanen : MonoBehaviour
     public void ShowOrderImage()
     {
         orderImageHolder.GetComponentInChildren<SpriteRenderer>().enabled = true;
-        customerImageHolder.GetComponent<SpriteRenderer>().enabled = true;
+        //customerImageHolder.GetComponent<SpriteRenderer>().enabled = true;
        /* 
         int burgerLayers = 0;
         float layerHeight = 0.15f;
@@ -92,16 +92,21 @@ public class PurilaisLautanen : MonoBehaviour
         stack.Clear();
         foreach (Transform i in transform)
         {
-            Destroy(i.gameObject);
+            if(ordersFailed>1){
+                i.gameObject.GetComponent<Explode>().ExplodeBurger(new Vector2(Random.Range(-2f,2f),Random.Range(0f,2f)));
+            }
+            else{
+                Destroy(i.gameObject);
+            }
         }
 
         if (orderPassed)
         {
             orderText.GetComponent<TextScript>().EndOrder();
-            
+            asiakas.GetComponent<CustomerMove>().Leave();
             //kim
             orderImageHolder.GetComponentInChildren<SpriteRenderer>().enabled = false;
-            customerImageHolder.GetComponent<SpriteRenderer>().enabled =false ;
+            //customerImageHolder.GetComponent<SpriteRenderer>().enabled =false ;
             /*
             foreach (Transform obj in orderImageChild.transform)
             {
@@ -110,7 +115,10 @@ public class PurilaisLautanen : MonoBehaviour
             //kim
  */
             Destroy(gameObject);
+        }else{
+            ordersFailed++;
         }
+        
     }
     public void addLayer(int aines)
     {
@@ -153,6 +161,7 @@ public class PurilaisLautanen : MonoBehaviour
     {
         if (aines >= 0)
         {
+            
             GameObject x = Instantiate(burgerTemplate, gameObject.transform.position + new Vector3(0, BurgerSize * 0.1f, 0), Quaternion.identity);
             x.GetComponent<SpriteRenderer>().sprite = menu.IngredientID[aines].Kuva;
             BurgerSize++;
@@ -163,6 +172,7 @@ public class PurilaisLautanen : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        gameObject.GetComponent<BoxCollider2D>().offset =new Vector2(0,BurgerSize *0.1f) ;
         if (BurgerTimer > 0)
         {
             BurgerTimer -= 1;

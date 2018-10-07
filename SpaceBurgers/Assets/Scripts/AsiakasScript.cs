@@ -7,7 +7,7 @@ public class AsiakasScript : MonoBehaviour
 
     // Use this for initialization
     
-
+    public GameObject asiakas;
     public GameObject orderText;
     public int asiakasMax;
     public GameObject Lautanen;
@@ -22,7 +22,7 @@ public class AsiakasScript : MonoBehaviour
     public int UnlockedIngredients;
     void Start()
     {
-        UnlockedIngredients = 5;
+        UnlockedIngredients = 10;
         asiakasMax = 1;
         levelMax = 2;
         burgerLevel = 0;
@@ -31,6 +31,8 @@ public class AsiakasScript : MonoBehaviour
         ProgressionMax = 0;
         NewBurgerAmount = 3;
         levelRequirement = 5;
+        burgerTimer = Random.Range(180, 300);
+
     }
 
     // Update is called once per frame
@@ -41,23 +43,22 @@ public class AsiakasScript : MonoBehaviour
             levelMax += NewBurgerAmount;
             ProgressionLevel++;
         }
-        if (GameObject.FindGameObjectsWithTag("Lautanen").Length < asiakasMax && burgerTimer == -1)
-        {
-            burgerTimer = Random.Range(180, 300);
-
-        }
+        
+        
+            
+        
         if (burgerTimer >= 0)
         {
             burgerTimer--;
         }
         if (burgerTimer == 0)
         {
-            OrderBurger();
+            asiakas.GetComponent<CustomerMove>().StartOrder();
         }
 
     }
 
-    void OrderBurger()
+    public void OrderBurger()
     {
         BurgerCount++;
         GameObject inst = Instantiate(Lautanen, transform.position, Quaternion.identity);

@@ -28,20 +28,24 @@ public class BurgerShowcase : MonoBehaviour
     }
 
 
-    void NextBurger()
+    public void SwitchBurger(int amount)
     {
         timer = 600;
         foreach (Transform z in transform)
         {
             Destroy(z.gameObject);
         }
-        if (burgerID < asiakasScript.GetComponent<AsiakasScript>().levelMax)
+        if (burgerID < asiakasScript.GetComponent<AsiakasScript>().levelMax&&amount == 1)
         {
             burgerID++;
         }
-        else
+        else if(amount == 1)
         {
             burgerID = 0;
+        }if (burgerID> 0&&amount == -1){
+            burgerID--;
+        }else if(amount ==-1){
+            burgerID = asiakasScript.GetComponent<AsiakasScript>().levelMax;
         }
 
         burgeri = menu.BurgerMenu[burgerID];
@@ -50,26 +54,7 @@ public class BurgerShowcase : MonoBehaviour
         showcaseBurger();
     }
 
-    public void OnNextBurgerClick(){   
-        timer = 600;
-        foreach (Transform z in transform)
-        {
-            Destroy(z.gameObject);
-        }
-        if (burgerID < asiakasScript.GetComponent<AsiakasScript>().levelMax)
-        {
-            burgerID++;
-        }
-        else
-        {
-            burgerID = 0;
-        }
-
-        burgeri = menu.BurgerMenu[burgerID];
-
-        burgerLayers = 0;
-        showcaseBurger();
-        }
+   
 
 
     void FixedUpdate()
@@ -80,7 +65,7 @@ public class BurgerShowcase : MonoBehaviour
         }
         if (timer == 0)
         {
-            NextBurger();
+            SwitchBurger(1);
         }
     }
 
