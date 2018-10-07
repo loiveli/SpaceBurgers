@@ -24,7 +24,7 @@ public class BurgerShowcase : MonoBehaviour
 
         burgerLayers = 0;
         showcaseBurger();
-        timer = 600;
+        timer = 900;
     }
 
 
