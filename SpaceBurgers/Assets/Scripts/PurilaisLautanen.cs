@@ -19,6 +19,7 @@ public class PurilaisLautanen : MonoBehaviour
     Text BurgerOrder;
     public GameObject asiakas;
     //kim
+    public ParticleSystem particleEmit;
     GameObject orderImageHolder;
     GameObject orderImageChild;
     public GameObject customerImageHolder;
@@ -117,6 +118,11 @@ public class PurilaisLautanen : MonoBehaviour
             Destroy(gameObject);
         }else{
             ordersFailed++;
+            if(ordersFailed>2){
+                particleEmit.Play();
+            }
+            asiakas.GetComponent<CustomerMove>().magnitude+=0.1f;
+            asiakas.GetComponent<CustomerMove>().freq+=0.5f;
         }
         
     }

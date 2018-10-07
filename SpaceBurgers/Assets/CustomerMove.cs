@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CustomerMove : MonoBehaviour {
+	[SerializeField]
 	Vector3 RealPos;
 	[SerializeField]
 	public float magnitude;
@@ -23,7 +24,7 @@ public class CustomerMove : MonoBehaviour {
 		asiakasRef = GameObject.FindGameObjectWithTag("AsiakasCTRL");
 		target = startOrderPoint.transform;
 		ordered = false;
-		freq = 1f;
+		freq = 0.5f;
 		magnitude = 0.1f;
 	}
 	
@@ -39,7 +40,7 @@ public class CustomerMove : MonoBehaviour {
 			ordered = false;
 		}
 		RealPos = Vector2.MoveTowards(RealPos,target.position,speed);
-		transform.position = RealPos +transform.up*Mathf.Sin(Time.time*freq)*magnitude;
+		transform.position = (RealPos +transform.up*Mathf.Sin(Time.time*freq)*magnitude)+(transform.right*Mathf.Sin(Time.time*freq*2.2f)*magnitude*0.5f);
 
 	}
 	public void StartOrder(){
