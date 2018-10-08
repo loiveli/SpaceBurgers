@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: 389fb4da74c4ca9469e55a945ee5c053
+guid: aaffa9d5b5bfe3746971d21000c4d50f
 TextureImporter:
   fileIDToRecycleName:
-    21300000: screen_arrow_right_0
+    21300000: game_over_main_menu_0
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -96,21 +96,21 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: screen_arrow_right_0
+      name: game_over_main_menu_0
       rect:
         serializedVersion: 2
-        x: 420
-        y: 119
-        width: 53
-        height: 51
+        x: 492
+        y: 70
+        width: 400
+        height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0832f4ba65bb8f41a0c5217ad6f135d
+      spriteID: a460bce5b4ff0aa4886d46694e1dacdf
       vertices: []
       indices: 
       edges: []
@@ -118,7 +118,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ce33bcaf4ba7fec458aa3dee2beeab92
+    spriteID: ce2f34add1c2d9c4c947a6efb5041c4b
     vertices: []
     indices: 
     edges: []

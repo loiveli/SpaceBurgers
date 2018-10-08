@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: ddc1b3abb12dad3429f1f80707500d55
+guid: 7774bf706f58b0f47af0a1fb4330076d
 TextureImporter:
   fileIDToRecycleName:
-    21300000: game_over_background_2
+    21300000: menu_options_0
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -96,13 +96,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: game_over_background_2
+      name: menu_options_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 62
-        width: 1180
-        height: 600
+        x: 735
+        y: 262
+        width: 400
+        height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,7 +110,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2b7e916de1d3fb4a92b9dd27f2a8fc9
+      spriteID: 90ffd4d1d660d954192059b4adb870e0
       vertices: []
       indices: 
       edges: []
@@ -118,7 +118,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6194f2a695f5f5d4e95b19f8b8f6c47e
+    spriteID: 319eb22a9f29a334482030a7dc762587
     vertices: []
     indices: 
     edges: []

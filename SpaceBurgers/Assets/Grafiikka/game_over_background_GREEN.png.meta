@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: 7774bf706f58b0f47af0a1fb4330076d
+guid: 5b664d1f7bdc41b44bfc05c609b5e10f
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: menu_options_0
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -94,31 +93,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: menu_options_0
-      rect:
-        serializedVersion: 2
-        x: 735
-        y: 262
-        width: 393
-        height: 117
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90ffd4d1d660d954192059b4adb870e0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 319eb22a9f29a334482030a7dc762587
+    spriteID: 751ae2692493ab147a70d55c0acd7181
     vertices: []
     indices: 
     edges: []
