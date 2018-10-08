@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class TextScript : MonoBehaviour
 {
    
     // Use this for initialization
-    public Text teksti;
+    public TextMeshProUGUI teksti;
     public GameObject anchor;
 
     void Start()
     {
        
-        teksti = gameObject.GetComponent<Text>();
+        teksti = gameObject.GetComponent<TextMeshProUGUI>();
         teksti.enabled = false;
 
     }
