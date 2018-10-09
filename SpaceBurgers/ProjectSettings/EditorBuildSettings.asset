@@ -18,9 +18,9 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/mainSceneKim.unity
+    path: Assets/Roskat/mainSceneKim.unity
     guid: a7762774f54722849ab6d90182d69387
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ValtteriScene.unity
     guid: 0cc7e2f2575c3d24ca7403dfb59f1c8c
   - enabled: 1
