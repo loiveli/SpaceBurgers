@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class EnergyMeter : MonoBehaviour
 {
     Image EnergyBar0;
-    float maxEnergy = 2000f;
+    float maxEnergy = 5000f;
     public static float Energy;
-    public int energySteps;
+    public static int energySteps;
     //kim
-    public float TotalEnergy;
+    public static float TotalEnergy;
     PauseControl gameControl;
     public GameObject gameControlGameObject;
     //kim
@@ -22,9 +22,14 @@ public class EnergyMeter : MonoBehaviour
         //kim
         energySteps = 6;
         EnergyBar0 = GetComponent<Image>();
-        Energy = maxEnergy +2000f;
+        Energy = maxEnergy+2000f ;
         TotalEnergy = 1f;
     }
+    
+    public static void LoadEnergy(){
+        TotalEnergy += 1f/energySteps;
+    }
+
     void FixedUpdate()
     {
         if (Energy > 0)
