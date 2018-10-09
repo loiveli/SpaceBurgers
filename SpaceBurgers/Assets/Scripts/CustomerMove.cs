@@ -18,6 +18,7 @@ public class CustomerMove : MonoBehaviour {
 	// Use this for initialization
 	public GameObject asiakasRef;
 	public float swingAngle;
+	public List<Sprite> aliens = new List<Sprite>();
 	public Transform target;
 	void Start () {
 		RealPos = transform.position;
@@ -50,6 +51,7 @@ public class CustomerMove : MonoBehaviour {
 	public void StartOrder(){
 		RealPos = startOrderPoint.transform.position;
 		target = orderPoint.transform;
+		gameObject.GetComponent<SpriteRenderer>().sprite = aliens[Random.Range(0,aliens.Count-1)];
 	}
 	public void Leave(){
 		target = LeavePoint.transform;
