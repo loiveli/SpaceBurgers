@@ -31,11 +31,16 @@ public class Energy : MonoBehaviour
 
             float increase = 0f;
 
+            if (energy > maxEnergy)
+            {
+                energy = maxEnergy;
+            }
+
             if (energy > 0 && lautanen.orderFail)
             {
                 increase = (maxEnergy * 0.17f) * -1;
                 energy += increase;
-                
+                EnergyBar0.fillAmount = energy / maxEnergy;
                 lautanen.orderFail = false;
             }
 
@@ -43,11 +48,9 @@ public class Energy : MonoBehaviour
             {
                 increase = maxEnergy * 0.17f;
                 energy += increase;
-                
+                EnergyBar0.fillAmount = energy / maxEnergy;
                 lautanen.orderPassed = false;
             }
-
-            EnergyBar0.fillAmount = energy / maxEnergy;
 
             if (energy <= 0)
             {
