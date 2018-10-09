@@ -14,7 +14,7 @@ public class EnergyMeter : MonoBehaviour
     public GameObject gameControlGameObject;
     //kim
 
-     void Start()
+    void Start()
     {
         //kim
         gameControl = gameControlGameObject.GetComponent<PauseControl>();
@@ -27,16 +27,16 @@ public class EnergyMeter : MonoBehaviour
     {
         if (Energy > 0)
         {
-            Energy-=10;
+            Energy -= 10;
         }
-        
+
         EnergyBar0.fillAmount = Energy / maxEnergy;
 
-        if(Energy == 0)
+        if (Energy == 0)
         {
             gameControl.GameOver();
         }
     }
 
-   
+
 }
