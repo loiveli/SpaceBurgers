@@ -26,7 +26,6 @@ public class PurilaisLautanen : MonoBehaviour
     public GameObject customerOriginPosition;
     public GameObject customerTargetPosition;
     public int ordersFailed;
-
     public bool orderFail;
     //kim
 
@@ -93,6 +92,7 @@ public class PurilaisLautanen : MonoBehaviour
     {
         BurgerSize = 0;
         stack.Clear();
+        Debug.Log("Order "+ orderPassed);
         foreach (Transform i in transform)
         {
             if(ordersFailed>1){
@@ -105,26 +105,22 @@ public class PurilaisLautanen : MonoBehaviour
 
         if (orderPassed)
         {
+            
             orderText.GetComponent<TextScript>().EndOrder();
             asiakas.GetComponent<CustomerMove>().Leave();
             //kim
             orderImageHolder.GetComponentInChildren<SpriteRenderer>().enabled = false;
-            //customerImageHolder.GetComponent<SpriteRenderer>().enabled =false ;
-            /*
-            foreach (Transform obj in orderImageChild.transform)
-            {
-                Destroy(obj.gameObject);
-            }
-            //kim
- */
+            
+            Debug.Log("Order Passed");
             Destroy(gameObject);
         }else{
             ordersFailed++;
             if(ordersFailed>2){
                 particleEmit.Play();
             }
-            asiakas.GetComponent<CustomerMove>().magnitude+=0.1f;
-            asiakas.GetComponent<CustomerMove>().freq+=0.5f;
+            Debug.Log("Order Failed");
+            asiakas.GetComponent<CustomerMove>().magnitude+=0.05f;
+            asiakas.GetComponent<CustomerMove>().freq+=1f;
         }
         
     }
@@ -155,7 +151,7 @@ public class PurilaisLautanen : MonoBehaviour
 
 
             orderPassed = true;
-            burgeri = menu.BurgerMenu[burgerID];
+            //burgeri = menu.BurgerMenu[burgerID];
             BurgerTimer = 100;
         }
         else

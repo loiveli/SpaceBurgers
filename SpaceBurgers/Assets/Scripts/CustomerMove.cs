@@ -26,6 +26,7 @@ public class CustomerMove : MonoBehaviour {
 		ordered = false;
 		freq = 0.5f;
 		magnitude = 0.1f;
+		
 	}
 	
 	// Update is called once per frame
@@ -37,11 +38,13 @@ public class CustomerMove : MonoBehaviour {
 		}
 		if(target == LeavePoint.transform&&Vector2.Distance(RealPos,target.position)<0.1f&&ordered){
 			asiakasRef.GetComponent<AsiakasScript>().burgerTimer = Random.Range(180, 300);
+			freq = 0.5f;
+		magnitude = 0.1f;
 			ordered = false;
 		}
 		RealPos = Vector2.MoveTowards(RealPos,target.position,speed);
-		transform.position = (RealPos +transform.up*Mathf.Sin(Time.time*freq)*magnitude)+(transform.right*Mathf.Sin(Time.time*freq*2.2f)*magnitude*0.5f);
-
+		transform.position = (RealPos +transform.up*Mathf.Sin(Time.time*freq)*magnitude)+(transform.right*Mathf.Sin((Time.time*freq*1.2f)+100)*magnitude*1.1f);
+		transform.rotation = Quaternion.AngleAxis(2.5f*Mathf.Sin((Time.time*(freq*1.25f))+50)*magnitude*5,Vector3.forward	);
 	}
 	public void StartOrder(){
 		RealPos = startOrderPoint.transform.position;
