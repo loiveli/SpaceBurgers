@@ -17,6 +17,7 @@ public class CustomerMove : MonoBehaviour {
 	public GameObject LeavePoint;
 	// Use this for initialization
 	public GameObject asiakasRef;
+	public float swingAngle;
 	public Transform target;
 	void Start () {
 		RealPos = transform.position;
@@ -26,7 +27,7 @@ public class CustomerMove : MonoBehaviour {
 		ordered = false;
 		freq = 0.5f;
 		magnitude = 0.1f;
-		
+		swingAngle = 5f;
 	}
 	
 	// Update is called once per frame
@@ -44,7 +45,7 @@ public class CustomerMove : MonoBehaviour {
 		}
 		RealPos = Vector2.MoveTowards(RealPos,target.position,speed);
 		transform.position = (RealPos +transform.up*Mathf.Sin(Time.time*freq)*magnitude)+(transform.right*Mathf.Sin((Time.time*freq*1.2f)+100)*magnitude*1.1f);
-		transform.rotation = Quaternion.AngleAxis(2.5f*Mathf.Sin((Time.time*(freq*1.25f))+50)*magnitude*5,Vector3.forward	);
+		transform.rotation = Quaternion.AngleAxis(swingAngle*Mathf.Sin((Time.time*(freq*1.25f))+50)*magnitude*5,Vector3.forward	);
 	}
 	public void StartOrder(){
 		RealPos = startOrderPoint.transform.position;
