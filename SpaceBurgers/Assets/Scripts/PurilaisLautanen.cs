@@ -26,6 +26,8 @@ public class PurilaisLautanen : MonoBehaviour
     public GameObject customerOriginPosition;
     public GameObject customerTargetPosition;
     public int ordersFailed;
+
+    public bool orderFail;
     //kim
 
     public void Start()
@@ -158,6 +160,9 @@ public class PurilaisLautanen : MonoBehaviour
         }
         else
         {
+            //
+            orderFail = true;
+            //
             Debug.Log("Wrong burger");
             BurgerTimer = 100;
         }

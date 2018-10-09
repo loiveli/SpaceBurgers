@@ -15,7 +15,7 @@ public class PauseControl : MonoBehaviour
     
     public GameObject PauseButton;
     public GameObject UnPauseButton;
-    // GameObject plate;
+ 
 
 
     void Awake()

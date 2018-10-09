@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ValtteriScene.unity
     guid: 0cc7e2f2575c3d24ca7403dfb59f1c8c
+  - enabled: 1
+    path: Assets/Scenes/temp.unity
+    guid: 345fffba502c0404abe6a8b6f434ccf1
   m_configObjects: {}
