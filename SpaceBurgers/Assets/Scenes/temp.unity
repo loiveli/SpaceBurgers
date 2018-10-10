@@ -2122,7 +2122,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3001
-  m_Sprite: {fileID: 21300000, guid: 522d67fe9eec24e4c82a844763035d9e, type: 3}
+  m_Sprite: {fileID: 21300016, guid: 0055ac4ff81f62347a6165773bd6ac94, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2140,9 +2140,9 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 589399829}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6bdd988adf5db734187fb2e2abcad1d3, type: 2}
+  m_Controller: {fileID: 9100000, guid: b864b60818392b04196330e933cf514a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2173,9 +2173,9 @@ MonoBehaviour:
   asiakasRef: {fileID: 0}
   swingAngle: 0
   aliens:
-  - {fileID: 21300000, guid: b0a0cd05b6556664ba80d8b459f6b6c6, type: 3}
-  - {fileID: 21300000, guid: 4ee95843944dcf646b40d74000da61c4, type: 3}
-  - {fileID: 21300000, guid: 0fcbfa5f3550e454baa2fa30e1a45cdd, type: 3}
+  - {fileID: 9100000, guid: 6bdd988adf5db734187fb2e2abcad1d3, type: 2}
+  - {fileID: 9100000, guid: b864b60818392b04196330e933cf514a, type: 2}
+  - {fileID: 9100000, guid: 7d2fb364219e79b4ea9299bc059cc692, type: 2}
   target: {fileID: 0}
 --- !u!1 &601767557
 GameObject:

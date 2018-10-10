@@ -19,7 +19,7 @@ public class FlyByPath : MonoBehaviour {
 	void Start()
 	{
 		targetPoint = transform;
-		StartFlyBy();
+		
 		stopTimer = -1;
 	}
 	public void StartFlyBy () {
