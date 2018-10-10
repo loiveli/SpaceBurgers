@@ -96,6 +96,7 @@ MonoBehaviour:
   customerOriginPosition: {fileID: 0}
   customerTargetPosition: {fileID: 0}
   ordersFailed: 0
+  orderFail: 0
 --- !u!198 &198590940610364432
 ParticleSystem:
   m_ObjectHideFlags: 1

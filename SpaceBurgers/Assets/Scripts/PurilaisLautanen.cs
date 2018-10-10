@@ -26,7 +26,7 @@ public class PurilaisLautanen : MonoBehaviour
     public GameObject customerOriginPosition;
     public GameObject customerTargetPosition;
     public int ordersFailed;
-    public bool orderFail;
+    public bool orderFail;  
     //kim
 
     public void Start()
@@ -48,6 +48,7 @@ public class PurilaisLautanen : MonoBehaviour
         customerOriginPosition = GameObject.FindGameObjectWithTag("Origin");
         customerTargetPosition = GameObject.FindGameObjectWithTag("Target");
         ShowOrderImage();
+   
         //kim
     }
 
@@ -119,8 +120,14 @@ public class PurilaisLautanen : MonoBehaviour
                 particleEmit.Play();
             }
             Debug.Log("Order Failed");
+           
             asiakas.GetComponent<CustomerMove>().magnitude+=0.05f;
             asiakas.GetComponent<CustomerMove>().freq+=1f;
+            SoundControl.PlaySound("oFailed");
+
+
+           
+
         }
         
     }
@@ -161,6 +168,8 @@ public class PurilaisLautanen : MonoBehaviour
             //
             Debug.Log("Wrong burger");
             BurgerTimer = 100;
+
+
         }
 
     }
