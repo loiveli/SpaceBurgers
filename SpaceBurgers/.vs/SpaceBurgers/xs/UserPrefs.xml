@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{98003951-7CC7-4AF0-D23B-C1E1D3FFC8B2}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SoundControl.cs">
+    <Files>
+      <File FileName="Assets/Scripts/SoundControl.cs" Line="7" Column="1" />
+      <File FileName="Assets/Scripts/PurilaisLautanen.cs" Line="171" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
