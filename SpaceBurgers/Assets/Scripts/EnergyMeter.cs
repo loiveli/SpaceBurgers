@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class EnergyMeter : MonoBehaviour
 {
     Image EnergyBar0;
+    public Image MiniEnergyBar;
     float maxEnergy = 5000f;
     public static float Energy;
     public static int energySteps;
@@ -22,29 +23,42 @@ public class EnergyMeter : MonoBehaviour
         //kim
         energySteps = 6;
         EnergyBar0 = GetComponent<Image>();
-        Energy = maxEnergy+2000f ;
+        Energy = maxEnergy + 4000f;
         TotalEnergy = 1f;
     }
-    
-    public static void LoadEnergy(){
-        TotalEnergy += 1f/energySteps;
+
+    public static void LoadEnergy(int palkki)
+    {
+        TotalEnergy += (1f / energySteps)*palkki;
     }
 
     void FixedUpdate()
     {
+        if(TotalEnergy >1){
+            TotalEnergy = 1;
+        }
         if (Energy > 0)
         {
             Energy -= 10;
         }
 
+        if (Energy/maxEnergy < 1)
+        {
+            MiniEnergyBar.fillAmount = Energy/maxEnergy;
+        }
+        else
+        {
+            MiniEnergyBar.fillAmount = 1;
+        }
         EnergyBar0.fillAmount = TotalEnergy;
 
         if (Energy == 0)
         {
             Energy = maxEnergy;
-            TotalEnergy -=1f/energySteps; 
+            TotalEnergy -= 1f / energySteps;
         }
-        if(TotalEnergy<(1f/energySteps)/2){
+        if (TotalEnergy < 0-(1f / energySteps) / 2)
+        {
             gameControl.GameOver();
         }
     }

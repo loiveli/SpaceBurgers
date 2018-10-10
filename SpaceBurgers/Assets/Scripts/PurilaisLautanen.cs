@@ -149,7 +149,7 @@ public class PurilaisLautanen : MonoBehaviour
         {
             Debug.Log("Correct burger");
 
-            EnergyMeter.LoadEnergy();
+            EnergyMeter.LoadEnergy(2);
             orderPassed = true;
             //burgeri = menu.BurgerMenu[burgerID];
             BurgerTimer = 100;

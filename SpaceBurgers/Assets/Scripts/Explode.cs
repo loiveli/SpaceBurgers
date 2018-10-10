@@ -16,7 +16,7 @@ public class Explode : MonoBehaviour {
 	}
 	void FixedUpdate () {
 		transform.position=transform.position +(Vector3)explosionForce;
-		if(timer >5){
+		if(timer >20){
 			Destroy(gameObject);
 		}
 		if(explosionForce !=Vector2.zero){
