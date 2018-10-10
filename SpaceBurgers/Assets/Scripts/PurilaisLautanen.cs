@@ -22,6 +22,7 @@ public class PurilaisLautanen : MonoBehaviour
     public ParticleSystem particleEmit;
     GameObject orderImageHolder;
     GameObject orderImageChild;
+    public GameObject asiakasCTRL;
     public GameObject customerImageHolder;
     public GameObject customerOriginPosition;
     public GameObject customerTargetPosition;
@@ -48,7 +49,7 @@ public class PurilaisLautanen : MonoBehaviour
         customerOriginPosition = GameObject.FindGameObjectWithTag("Origin");
         customerTargetPosition = GameObject.FindGameObjectWithTag("Target");
         ShowOrderImage();
-   
+        asiakasCTRL = GameObject.FindGameObjectWithTag("AsiakasCTRL");
         //kim
     }
 
@@ -111,7 +112,7 @@ public class PurilaisLautanen : MonoBehaviour
             asiakas.GetComponent<CustomerMove>().Leave();
             //kim
             orderImageHolder.GetComponentInChildren<SpriteRenderer>().enabled = false;
-            
+            asiakasCTRL.GetComponent<AsiakasScript>().BurgerCount++;
             Debug.Log("Order Passed");
             Destroy(gameObject);
         }else{
@@ -123,7 +124,7 @@ public class PurilaisLautanen : MonoBehaviour
            
             asiakas.GetComponent<CustomerMove>().magnitude+=0.05f;
             asiakas.GetComponent<CustomerMove>().freq+=1f;
-            SoundControl.PlaySound("oFailed");
+            //SoundControl.PlaySound("oFailed");
 
 
            

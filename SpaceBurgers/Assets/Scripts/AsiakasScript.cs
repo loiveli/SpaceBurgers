@@ -20,9 +20,13 @@ public class AsiakasScript : MonoBehaviour
     public int ProgressionMax;
     public int levelRequirement;
     public int UnlockedIngredients;
+    public int newUlockedIngredients;
+    public GameObject flyby;
+    
     void Start()
     {
-        UnlockedIngredients = 10;
+        newUlockedIngredients = 4;
+        UnlockedIngredients = 5;
         asiakasMax = 1;
         levelMax = 2;
         burgerLevel = 0;
@@ -30,7 +34,7 @@ public class AsiakasScript : MonoBehaviour
         ProgressionLevel = 0;
         ProgressionMax = 0;
         NewBurgerAmount = 3;
-        levelRequirement = 5;
+        levelRequirement = 3;
         burgerTimer = Random.Range(180, 300);
 
     }
@@ -38,9 +42,11 @@ public class AsiakasScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (BurgerCount % levelRequirement == 0 && ProgressionLevel < ProgressionMax)
+        if (BurgerCount == levelRequirement && ProgressionLevel < ProgressionMax)
         {
-            levelMax += NewBurgerAmount;
+            flyby.GetComponent<FlyByPath>().StartFlyBy();
+            BurgerCount = 0;   
+            
             ProgressionLevel++;
         }
         
@@ -57,10 +63,13 @@ public class AsiakasScript : MonoBehaviour
         }
 
     }
-
+    public void Progress(){
+        levelMax += NewBurgerAmount;
+        UnlockedIngredients += newUlockedIngredients;
+    }
     public void OrderBurger()
     {
-        BurgerCount++;
+        
         GameObject inst = Instantiate(Lautanen, transform.position, Quaternion.identity);
         if (burgerLevel <= levelMax)
         {

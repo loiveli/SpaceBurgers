@@ -10,13 +10,13 @@ public class UIAnchor : MonoBehaviour {
     void Awake()
     {
        if(anchor != null){
-            transform.position = Camera.main.WorldToScreenPoint(anchor.transform.position);
+            transform.position = anchor.transform.position;
         } 
     }
     void Update()
     {
         if(anchor != null){
-            transform.position = Camera.main.WorldToScreenPoint(anchor.transform.position);
+            transform.position = anchor.transform.position;
         }
         
     }

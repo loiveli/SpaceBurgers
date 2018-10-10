@@ -22,7 +22,7 @@ public class TextScript : MonoBehaviour
     void Update()
     {
         if(anchor != null){
-            transform.position = Camera.main.WorldToScreenPoint(anchor.transform.position);
+            transform.position = anchor.transform.position;
         }
         
     }
