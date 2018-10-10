@@ -2140,8 +2140,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2d8c8c687e86a4416bcfbfc4a7139101, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3689,11 +3689,11 @@ MonoBehaviour:
 
     Garphic artist
 
-    Alina, Linda, Saija
+    Linda, Saija
 
 
 
-    Coding engineer
+    Programmer
 
     Kim, Linda, Taavi, Valtteri
 
@@ -3768,15 +3768,15 @@ MonoBehaviour:
   m_margin: {x: 0, y: 100, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2113040149}
-    characterCount: 109
+    characterCount: 97
     spriteCount: 0
-    spaceCount: 18
-    wordCount: 15
+    spaceCount: 16
+    wordCount: 13
     linkCount: 0
     lineCount: 10
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
