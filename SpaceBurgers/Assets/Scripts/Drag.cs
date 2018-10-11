@@ -55,7 +55,7 @@ public class Drag : MonoBehaviour
 	void OnMouseDown()
 	{
 	Collider2D[] colliders;
-		colliders = Physics2D.OverlapBoxAll(gameObject.transform.position, new Vector2(0.5f,0.5f),0f);
+		colliders = Physics2D.OverlapBoxAll(gameObject.transform.position, new Vector2(0.1f,0.1f),0f);
 		foreach(Collider2D meme in colliders){
 			if(meme.tag == "Pino"){
 				StartDrag( meme.gameObject.GetComponent<AinesIDREF>().AinesOsaID);

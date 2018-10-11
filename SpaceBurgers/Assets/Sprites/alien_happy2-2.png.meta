@@ -91,10 +91,10 @@ TextureImporter:
       name: alien_happy2-2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 408
-        height: 526
+        x: 3
+        y: 36
+        width: 402
+        height: 443
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -102,7 +102,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67e1ec1b6aea6ea43bcf2947c15a62db
+      spriteID: 753af1aa576bc724fbd67ed5b238c1c6
       vertices: []
       indices: 
       edges: []
@@ -111,10 +111,10 @@ TextureImporter:
       name: alien_happy2-2_1
       rect:
         serializedVersion: 2
-        x: 408
-        y: 0
-        width: 408
-        height: 526
+        x: 411
+        y: 36
+        width: 402
+        height: 443
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,7 +122,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 777dd4cc758f9d64092e4c9c635a5744
+      spriteID: c423eeaa384c64f48b28fcfef426016a
       vertices: []
       indices: 
       edges: []
@@ -131,10 +131,10 @@ TextureImporter:
       name: alien_happy2-2_2
       rect:
         serializedVersion: 2
-        x: 816
-        y: 0
-        width: 408
-        height: 526
+        x: 819
+        y: 36
+        width: 402
+        height: 443
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,7 +142,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a3ae29962d553e4989fc6c9985e3074
+      spriteID: a09a5c59d6e5ba54188c4904da84f89d
       vertices: []
       indices: 
       edges: []
@@ -151,10 +151,10 @@ TextureImporter:
       name: alien_happy2-2_3
       rect:
         serializedVersion: 2
-        x: 1224
-        y: 0
-        width: 408
-        height: 526
+        x: 1227
+        y: 36
+        width: 402
+        height: 443
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,7 +162,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2e4e760a00d3da43b97f168ea18c05a
+      spriteID: 94d0067c08634d8448c6f960e81fb3a3
       vertices: []
       indices: 
       edges: []

@@ -97,7 +97,7 @@ public class PurilaisLautanen : MonoBehaviour
         Debug.Log("Order "+ orderPassed);
         foreach (Transform i in transform)
         {
-            if(ordersFailed>1){
+            if(ordersFailed>0){
                 i.gameObject.GetComponent<Explode>().ExplodeBurger(new Vector2(Random.Range(-2f,2f),Random.Range(0f,2f)));
             }
             else{
@@ -107,7 +107,7 @@ public class PurilaisLautanen : MonoBehaviour
 
         if (orderPassed)
         {
-            
+            asiakas.GetComponent<Animator>().SetTrigger("Happy");
             orderText.GetComponent<TextScript>().EndOrder();
             asiakas.GetComponent<CustomerMove>().Leave();
             //kim
@@ -117,11 +117,11 @@ public class PurilaisLautanen : MonoBehaviour
             Destroy(gameObject);
         }else{
             ordersFailed++;
-            if(ordersFailed>2){
+            if(ordersFailed>1){
                 particleEmit.Play();
             }
             Debug.Log("Order Failed");
-           
+            asiakas.GetComponent<Animator>().SetTrigger("Mad");
             asiakas.GetComponent<CustomerMove>().magnitude+=0.05f;
             asiakas.GetComponent<CustomerMove>().freq+=1f;
             //SoundControl.PlaySound("oFailed");
@@ -131,6 +131,12 @@ public class PurilaisLautanen : MonoBehaviour
 
         }
         
+    }
+    public void debugBurger(){
+        foreach(int i in burgeri.Ingredients){
+            addLayer(i);
+        }
+        addLayer(5);
     }
     public void addLayer(int aines)
     {

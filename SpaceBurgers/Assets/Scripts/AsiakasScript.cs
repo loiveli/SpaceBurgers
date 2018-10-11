@@ -6,7 +6,8 @@ public class AsiakasScript : MonoBehaviour
 {
 
     // Use this for initialization
-    
+    public GameObject button;
+    public bool debugMode;
     public GameObject asiakas;
     public GameObject orderText;
     public int asiakasMax;
@@ -22,21 +23,22 @@ public class AsiakasScript : MonoBehaviour
     public int UnlockedIngredients;
     public int newUlockedIngredients;
     public GameObject flyby;
-    
+    public GameObject debugObj;
     void Start()
     {
-        newUlockedIngredients = 4;
+        newUlockedIngredients = 2;
         UnlockedIngredients = 5;
         asiakasMax = 1;
-        levelMax = 2;
+        levelMax = 4;
         burgerLevel = 0;
         burgerTimer = -1;
         ProgressionLevel = 0;
-        ProgressionMax = 0;
+        ProgressionMax = 2;
         NewBurgerAmount = 3;
-        levelRequirement = 3;
+        levelRequirement = 6;
         burgerTimer = Random.Range(180, 300);
-
+        
+        Debug.Log(PlayerPrefs.GetInt("DebugMode",0));
     }
 
     // Update is called once per frame
@@ -82,6 +84,12 @@ public class AsiakasScript : MonoBehaviour
         }
 
     }
-
+    public void DebugLautanen(){
+        debugObj = GameObject.FindGameObjectWithTag("Lautanen");
+        if(debugObj != null){
+            debugObj.GetComponent<PurilaisLautanen>().debugBurger();
+        }
+        
+    }
 
 }

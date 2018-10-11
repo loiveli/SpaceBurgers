@@ -95,10 +95,10 @@ TextureImporter:
       name: alien1_angrysheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 408
-        height: 526
+        x: 3
+        y: 38
+        width: 402
+        height: 443
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -106,7 +106,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44067fb83a338a346b86926a08847edf
+      spriteID: 136e9f2bb6733474c8727de82f1ad84d
       vertices: []
       indices: 
       edges: []
@@ -115,10 +115,10 @@ TextureImporter:
       name: alien1_angrysheet_1
       rect:
         serializedVersion: 2
-        x: 408
-        y: 0
-        width: 408
-        height: 526
+        x: 411
+        y: 38
+        width: 402
+        height: 443
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,7 +126,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64fe916209db8124388c5004d37c0713
+      spriteID: 3f00e74da1604ad4fab4b792b9262cc0
       vertices: []
       indices: 
       edges: []
@@ -135,10 +135,10 @@ TextureImporter:
       name: alien1_angrysheet_2
       rect:
         serializedVersion: 2
-        x: 816
-        y: 0
-        width: 408
-        height: 526
+        x: 819
+        y: 38
+        width: 402
+        height: 443
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,7 +146,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac161e711cd158441a34bf89302dd275
+      spriteID: 89f76be7156cc9f46be2eacdad9d34e1
       vertices: []
       indices: 
       edges: []
@@ -155,10 +155,10 @@ TextureImporter:
       name: alien1_angrysheet_3
       rect:
         serializedVersion: 2
-        x: 1224
-        y: 0
-        width: 408
-        height: 526
+        x: 1227
+        y: 38
+        width: 402
+        height: 443
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,7 +166,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8b4e86112d4e92459cbbbcb36073675
+      spriteID: ef8ca155e9da8ef43b58b8ea16da062e
       vertices: []
       indices: 
       edges: []
@@ -175,10 +175,10 @@ TextureImporter:
       name: alien1_angrysheet_4
       rect:
         serializedVersion: 2
-        x: 1632
-        y: 0
-        width: 408
-        height: 526
+        x: 1635
+        y: 38
+        width: 402
+        height: 443
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,7 +186,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e759143669045764abb6f5cabb34edb0
+      spriteID: 9c7a1edce2aeb744481e3eb693f4fe06
       vertices: []
       indices: 
       edges: []
@@ -195,10 +195,10 @@ TextureImporter:
       name: alien1_angrysheet_5
       rect:
         serializedVersion: 2
-        x: 2040
-        y: 0
-        width: 408
-        height: 526
+        x: 2043
+        y: 38
+        width: 402
+        height: 443
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,7 +206,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c926ae092b0e7c549a76acf00408fbc4
+      spriteID: 3ee2a36c0e82d5b468840e75ad75e2d7
       vertices: []
       indices: 
       edges: []
@@ -215,10 +215,10 @@ TextureImporter:
       name: alien1_angrysheet_6
       rect:
         serializedVersion: 2
-        x: 2448
-        y: 0
-        width: 408
-        height: 526
+        x: 2451
+        y: 38
+        width: 402
+        height: 443
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,7 +226,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2758dade20f7a1448b2cafc16283ea62
+      spriteID: 3ef7ee41867d5494f8fcac7455ff536e
       vertices: []
       indices: 
       edges: []
@@ -235,10 +235,10 @@ TextureImporter:
       name: alien1_angrysheet_7
       rect:
         serializedVersion: 2
-        x: 2856
-        y: 0
-        width: 408
-        height: 526
+        x: 2859
+        y: 38
+        width: 402
+        height: 443
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,7 +246,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d33c2402b2014d6478a0f2b70644425d
+      spriteID: 1bd376b23228b95449de181fd636920f
       vertices: []
       indices: 
       edges: []

@@ -204,7 +204,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &109798186
 GameObject:
   m_ObjectHideFlags: 0
@@ -2577,6 +2577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc2e51585f145874d9e7c2e4bd5855c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugToggle: {fileID: 23125838}
 --- !u!1 &1322036076
 GameObject:
   m_ObjectHideFlags: 0
